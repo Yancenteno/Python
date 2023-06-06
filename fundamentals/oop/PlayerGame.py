@@ -17,6 +17,11 @@ class Player:
     def TakeDamage(self, dmg):
         self.hp = self.hp - (dmg - self.defense)
         print(f'Player {self.name} takes {dmg}! \n Current HP : {self.hp}')
+        
+    @classmethod
+    def GetAllPlayers(cls):
+        for player in cls.Player_List:
+            print(player.name)
 
 
 
@@ -34,4 +39,12 @@ coding= Player('Coding', 500, 90, 1000, ['debt', 'teach', 'hypnosis'])
 # nudeMafia.Game_Name = 'Lost in Life: After Air Force'
 # print(nudeMafia.Game_Name)
 
-# print(Player.Player_List) #???
+Player.GetAllPlayers()
+
+
+
+class Companion:
+    def __init__(self, name, mana, abilities) -> None:
+        self.name = name
+        self.mana = mana
+        self.abilities = abilities
