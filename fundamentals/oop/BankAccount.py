@@ -4,6 +4,7 @@ class BankAccount:
     def __init__(self, int_rate, balance):
         self.int_rate = int_rate
         self.balance = balance
+        BankAccount.All_accounts.append(self)
         
     def deposit(self, amount):
         self.balance = self.balance + amount
@@ -25,12 +26,12 @@ class BankAccount:
     @classmethod
     def bank_account_info(cls):
         for account in cls.All_accounts:
-            print(account)
+            print(account.balance)
 
 td = BankAccount(0.01, 1000)
 td.display_account_info().deposit(200).deposit(50).deposit(100).withdraw(500).yield_interest().display_account_info()
 
 chase = BankAccount(0.15, 500)
-chase.display_account_info().deposit(1).deposit(5).deposit(0.50).withdraw(500).yield_interest().display_account_info()
+chase.display_account_info().deposit(100).deposit(200).deposit(100).withdraw(100).yield_interest().display_account_info()
 
 BankAccount.bank_account_info()
