@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("index.html", phrase="hello", times=5)	# notice the 2 new named arguments!
+    return render_template("index.html")
 
 
 
