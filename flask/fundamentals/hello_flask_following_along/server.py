@@ -10,7 +10,7 @@ def hello_name(name):
     return f'Hello {name}'
 
 @app.route('/hello/<name>/<food>')
-def hello_name_food(name,food):
+def hello_name2(name,food):
     return f'Hello {name} favorite food is {food}!'
 
 if __name__=="__main__":
