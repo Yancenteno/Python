@@ -41,3 +41,14 @@ class Game:
         results = connectToMySQL(cls.DB).query_db(query, data)
         
         return results
+    
+    @classmethod
+    def get_one(cls, data):
+        query = """
+        SELECT * FROM games
+        WHERE id = %(game_id)s;
+        """
+        
+        results = connectToMySQL(cls,DB).query_db(query, data)
+        
+        return cls(results[0])

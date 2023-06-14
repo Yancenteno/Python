@@ -20,7 +20,7 @@ def submit_game_form():
         'release_year' : request.form['release_year']
     }
     
-    Game.add_game(request.form)
+    Game.add_games(request.form)
     
     return redirect('/')
 
@@ -32,6 +32,13 @@ def Home():
     print(all_games)
     return render_template('index.html', all_games = all_games)
 
+
+@app.route('/edit/<int:game_id>')
+def show_edit_form(game_id):
+    
+    Game.get_one({{game_id : game_id}})
+    
+    return render_template('edit_form.html', one_game=one_game)
 
 
 

@@ -13,7 +13,7 @@
     <ul>
         {% for game in all_games %}
 
-        <li>{{game.game}}</li>
+        <li>{{game.game}} | <a href="/edit{{game.id}}">Edit</a></li>
         
         {% endfor %}
     </ul>
