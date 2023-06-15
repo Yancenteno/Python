@@ -20,14 +20,6 @@ const str4 = "a(b))(c";
 const expected4 = false;
 // Explanation: same number of opens and closes but the 2nd closing closes nothing.
 
-const str1_1 = "W(a{t}s[o(n{ c}o)m]e )h[e{r}e]!";
-const expected1_1 = true;
-
-const str2_1 = "D(i{a}l[ t]o)n{e";
-const expected2_1 = false;
-
-const str3_1 = "A(1)s[O (n]0{t) 0}k";
-const expected3_1 = false;
 
 /**
  * Determines whether the parenthesis in the given string are valid.
