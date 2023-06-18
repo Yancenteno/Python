@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class="container d-flex justify-content-center" id="view">
+    <div class="container bg-black w-50 p-4" id="container">
+        <div class="mb-2 bg-danger bg-gradient text-center text-black" >
+            <h1>Dojo Survey</h1>
+        </div>
+        <form action='/survey' method='post'>
+            <div class="mb-3 text-white">
+                <label for="Name" class="form-label">Name:</label>
+                <input type="text" name="name" class="form-control border-danger border-4">
+            </div>
+            <div class="mb-3 text-white">
+                <label for="location" class="form-label">Dojo Location:</label>
+                <select name="location" id="location" class="form-select border-danger border-4">
+                    <option value="select-location">--Select A Location--</option>
+                    <option value="michigan">Michigan</option>
+                    <option value="alaska">Alaska</option>
+                    <option value="virginia">Virginia</option>
+                    <option value="guam">Guam</option>
+                    <option value="texas">Texas</option>
+                </select>
+            </div>
+            <div class="mb-3 text-white">
+                <label for="language" class="form-label">Favorite Language:</label>
+                <select name="language" id="language" class="form-select border-danger border-4">
+                    <option value="select-language">--Select A Language--</option>
+                    <option value="java-script">JavaScript</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="python">Python</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="comment" class="form-label text-white ">Comments:</label>
+                <textarea name="comment" class="form-control border-danger border-4" id="comment" rows="5"></textarea>
+            </div>
+            <div>
+                <input type="submit" name="New Ninja">
+            </div>
+        </form>
+        {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+        {% if messages %}                            <!-- check if there are any messages -->
+            {% for message in messages %}            <!-- loop through the messages -->
+                <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    </div>
+</body>
+</html>
