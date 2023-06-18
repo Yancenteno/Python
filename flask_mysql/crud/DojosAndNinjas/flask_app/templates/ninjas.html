@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <title>Ninjas</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <body style="background-color: grey;">
+    <div class="container bg-success-subtle position-relative" style="height: 450px; width:400px;">
+      <div class="container bg-primary border border-5 border-info position-absolute top-50 start-50">
+        <h2>New Ninja</h2>
+        <form action="/new_ninja" method="post" class="text-light fs-5">
+          <div class="mb-3">
+            <label for="dojo_id">Dojo:</label>
+            <select name="dojo_id" class="form-select-md" width="4">
+              {% for dojo in all_dojos %}
+              <option value={{dojo.id}} class="dropdown-tem active">{{dojo.name}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="first_name"> First Name:</label>
+            <input type="text" name="first_name" />
+          </div>
+          <div class="mb-3">
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" />
+          </div>
+          <div class="mb-3">
+            <label for="age">Age:</label>
+            <input type="number" name="age" />
+          </div>
+          <div class="mb-3">
+            <input type="submit" name="New Ninja">
+          </div>
+        </form>
+        <div class="mx-auto p-2 text-center">
+          <a class="btn btn-info" role="button" href="/dojos" class="text-light">Home</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
 </html>

@@ -15,19 +15,20 @@ class Dojo:
         Insert INTO dojos (name, created_at, updated_at)
         VALUES (%(name)s, NOW(), NOW());
         """
-        dojo_id = connectToMySQL('dojos').query_db(query, data)
+        dojo_id = connectToMySQL('dojos_and_ninjas_schema').query_db(query, data)
         return dojo_id
     
     @classmethod
     def get_all(cls):
         query = """
-        SELECT * FROM dojos;
+        SELECT * 
+        FROM dojos;
         """
         result = connectToMySQL('dojos_and_ninjas_schema').query_db(query)
-        dojos = []
+        all_dojos = []
         for d in result:
-            dojos.append(cls(d))
-        return dojos
+            all_dojos.append(cls(d))
+        return all_dojos
     
     @classmethod
     def get_one(cls, data):
@@ -47,30 +48,17 @@ class Dojo:
         return connectToMySQL('dojos_and_ninjas_schema').query_db(query, data)
     
     @classmethod
-    def delete(cls,data):
-        query = """
-        DELETE FROM dojos
-        WHERE id = %(id)s;
-        """
-        return connectToMySQL('dojos_and_ninjas_schema').query_db(query, data)
-    
-    @classmethod
     def get_dojo_ninjas(cls, data):
         query = """
         SELECT * FROM dojos
-        LEFT JOIN ninjas ON ninjas.dojo_id = dojos.id
+        JOIN ninjas ON ninjas.dojo_id = dojos.id
         WHERE dojos.id = %(id)s;
         """
         result = connectToMySQL('dojos_and_ninjas_schema').query_db(query, data)
-        dojos= cls(result[0])
+        print(result)
+        dojos = []
         for r in result:
-            ninja_data = {
-                "id" : r["ninjas.id"],
-                "first_name" : r["ninjas.first_name"],
-                "last_name" : r["ninjas.last_name"],
-                "age" : r["ninjas.age"],
-                "created_at" : r["ninjas.created_at"],
-                "updated_at" : r["ninjas.updated_at"]
-            }
-            dojos.ninjas.append(ninja.Ninja(ninja_data))
+            dojos.append(cls(r))
+            # dojos.ninjas.append(ninja.Ninja())
         return dojos
+    
