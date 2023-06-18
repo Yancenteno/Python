@@ -1,4 +1,4 @@
-from flask_app.controllers import ____
+from flask_app.controllers import emails_controller
 from flask_app import app
 
 
