@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body style="background-color: darkviolet;">
+    <div class="container">
+        <div class=" container-fluid" style="border-radius: 20px; border: 5px solid black; background-color: purple;">
+            <h1 class="text-center ">Welcome, {{newUser.first_name}}</h1>
+        </div>
+        <div class=" container-fluid flex"
+            style="border-radius: 20px; border: 5px solid black; background-color: purple; display: flex; justify-content: space-between;">
+            <div>
+                <h3>All posted recipes:</h3>
+            </div>
+            <div>
+                <a href="#">+Create</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+        <div>
+            <table class="table table-striped ">
+                <thead>
+                    <tr class="text-light">
+                        <th scope="col">Name</th>
+                        <th scope="col">Under</th>
+                        <th scope="col">Posted By</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Spaghetti</th>
+                        <td>Yes</td>
+                        <td>Alana</td>
+                        <td><a href="#">view recipe</a> | <a href="#">edit</a> | <a href="#">delete</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Spam Musubi</th>
+                        <td>Yes</td>
+                        <td>Kai</td>
+                        <td><a href="#">view recipe</a> | <a href="#">edit</a> | <a href="#">delete</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cheesecake</th>
+                        <td>No</td>
+                        <td>Rojan</td>
+                        <td><a href="#">view recipe</a> | <a href="#">edit</a> | <a href="#">delete</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Garlic Bread</th>
+                        <td>Yes</td>
+                        <td>Alana</td>
+                        <td><a href="#">view recipe</a> | <a href="#">edit</a> | <a href="#">delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

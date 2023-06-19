@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body style="background-color: darkviolet;">
+    <div class="container">
+        <div class=" container-fluid"
+            style="border-radius: 20px; border: 5px solid black; background-color: purple; display: flex; justify-content: space-around; align-items: center;">
+            <div>
+                <h1>Edit Recipe!</h1>
+            </div>
+            <div>
+                <a href="#">back to recipes</a>
+                <a href="#">logout</a>
+            </div>
+        </div>
+        <div class=" container-fluid"
+            style="border-radius: 20px; border: 5px solid black; background-color: purple; color: white;">
+            <div>
+                <div>
+                    <p style=" color: red;">Description must not be black</p>
+                </div>
+                <form action="#" class="align-items-center">
+                    <div class="d-flex" style="margin: 20px;">
+                        <label for="name">name:</label>
+                        <input type="text" class="container-fluid" style="margin-left: 40px;">
+                    </div>
+                    <div class="d-flex" style="margin: 20px;">
+                        <label for="description">Description:</label>
+                        <textarea class="form-control container-fluid" id="exampleFormControlTextarea1"
+                            rows="2"></textarea>
+                    </div>
+                    <div class="d-flex" style="margin: 20px;">
+                        <label for="instructions">instructions:</label>
+                        <textarea class="form-control container-fluid" id="exampleFormControlTextarea1"
+                            rows="2"></textarea>
+                    </div>
+                    <div style="margin: 20px;">
+                        <label for="date" style="padding-right: 20px;">Date Cooked/Made:</label>
+                        <input type="date">
+                    </div>
+                    <div style="margin: 20px;" style="display: flex;">
+                        <div>
+                            <label for="question" style="padding-right: 30px;">Under 30 minutes?</label>
+                            <input type="radio" name="questions" value="1">
+                            <label for="yes">yes</label>
+                            <input type="radio" name="questions" value="0">
+                            <label for="no">No</label>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <input type="submit"
+                                style="font-size: 20px; background-color: blue; color: white; border-radius: 10px;">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
