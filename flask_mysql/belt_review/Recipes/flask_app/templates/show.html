@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome, {{newUser.first_name}}</h1>
+    <h2>{{one_recipe.name}}</h2>
+    <p>Description: {{one_recipe.description}}</p>
+    <p>Under 30 Minutes? {% if one_recipe.under_30 == 1 %} Yes {% else %} No {% endif %}</p>
+    <p>Instructions: {{one_recipe.instructions}}</p>
+    <p>Date Made: {{one_recipe.date}}</p>
+    <div>
+        <a href="/recipes">back to recipes</a> |
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+
+</html>

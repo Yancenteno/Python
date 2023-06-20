@@ -20,8 +20,8 @@
                 <h3>All posted recipes:</h3>
             </div>
             <div>
-                <a href="#">+Create</a>
-                <a href="#">Logout</a>
+                <a href="/recipes/new">+Create</a>
+                <a href="/logout">Logout</a>
             </div>
         </div>
         <div>
@@ -35,30 +35,24 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for recipe in all_recipes %}
                     <tr>
-                        <th scope="row">Spaghetti</th>
+                        <th>{{recipe.name}}</th>
+                        {% if recipe.under_30 == 1 %}
                         <td>Yes</td>
-                        <td>Alana</td>
-                        <td><a href="#">view recipe</a> | <a href="#">edit</a> | <a href="#">delete</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Spam Musubi</th>
-                        <td>Yes</td>
-                        <td>Kai</td>
-                        <td><a href="#">view recipe</a> | <a href="#">edit</a> | <a href="#">delete</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Cheesecake</th>
+                        {% else %}
                         <td>No</td>
-                        <td>Rojan</td>
-                        <td><a href="#">view recipe</a> | <a href="#">edit</a> | <a href="#">delete</a></td>
+                        {% endif %}
+                        <td>{{recipe.recipe_poster.first_name}}</td>
+                        <td>
+                            <a href='/show/{{recipe.id}}'>view recipes</a>
+                            {% if recipe.user_id == session['user_id'] %}
+                            | <a href="/recipes/edit/{{recipe.id}}">edit</a> |
+                            <a href="/recipes/delete/{{recipe.id}}">delete</a>
+                            {% endif %}
+                        </td>
                     </tr>
-                    <tr>
-                        <th scope="row">Garlic Bread</th>
-                        <td>Yes</td>
-                        <td>Alana</td>
-                        <td><a href="#">view recipe</a> | <a href="#">edit</a> | <a href="#">delete</a></td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>

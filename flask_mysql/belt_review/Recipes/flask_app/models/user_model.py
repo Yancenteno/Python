@@ -5,7 +5,7 @@ from flask import flash
 
 class User:
     db = "recipe_share"
-    def __init__(self, data):
+    def __init__(self, data) -> None:
         self. id = data['id']
         self.first_name = data['first_name']
         self.last_name = data['last_name']
@@ -13,6 +13,7 @@ class User:
         self.password = data['password']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
+        
         
     @classmethod
     def save(cls, data):
