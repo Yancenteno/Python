@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('/static/img/home.jpg');
+    background-position: top;
+    background-size: cover;
+}
+
+.box {
+    height: 700px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.top-bar {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.drinking {
+    height: 300px;
+    width: 400px;
+    border-radius: 50%;
+    position: absolute;
+    top: 120px;
+    left: 525px;
+}
+
+.bottom-bar {
+    height: 350px;
+    display: flex;
+}
+
+.bot {
+    flex: 1;
+}
+
+
+.portal-control {
+    display: flex;
+    justify-content: center;
+}
+
+
+.portal-1 {
+    height: 200px;
+}
+
+
+.portal-2 {
+    margin-top: 100px;
+    height: 200px;
+}
+
+
+.portal-3 {
+    height: 200px;
+}
+
+
+
+.title {
+    text-align: center;
+    color: green;
+    font-style: oblique;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="top-bar">
+            <div>
+                <img class="drinking" src='/static/img/jail_rick.png'>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="bot">
+                <div class="portal-control">
+                    <a href="/characters"><img class="portal-1" src="/static/img/portal.gif"></a>
+                </div>
+                <div class="title">
+                    <h2>characters</h2>
+                </div>
+            </div>
+            <div class="bot">
+                <div class="portal-control">
+                    <a href="/location"><img class="portal-2" src="/static/img/portal.gif"></a>
+                </div>
+                <div class="title">
+                    <h2>location</h2>
+                </div>
+            </div>
+            <div class="bot">
+                <div class="portal-control">
+                    <a href="/episodes"><img class="portal-3" src="/static/img/portal.gif"></a>
+                </div>
+                <div class="title">
+                    <h2>episodes</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('/static/img/space-2.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.big-box {
+    height: 745px;
+    width: 1481px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    height: 600px;
+    width: 800px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+
+.enter {
+    display: flex;
+    justify-content: center;
+}
+
+
+.portal {
+    height: 300px;
+    width: 300px;
+}
