@@ -74,29 +74,35 @@ function sumArr(nums) {
 /*****************************************************************************/
 
 function recursiveSigma(number) {
-
     if (number < 1) {
-
         return 0;
-
     }
-
     return number + recursiveSigma(number - 1);
-
 }
 
 console.log(`\n\nOutput of recursiveSigma(5): \n${recursiveSigma(5)}\n\n`)
 
 function sumArray(array) {
-
     if (array.length === 0) {
-
         return 0;
-
     }
-
     return array.pop() + sumArray(array);
-
 }
-
 console.log(`\n\nOutput of sumArray([1,2,3,4,5]): \n${sumArray([1, 2, 3, 4, 5])}\n\n`)
+
+
+function sumArr(nums) {
+    // Breaking down a for loop into a recursive version.
+    // What would your code block ina for loop for this look like?
+    // For each itteration, call the function.
+    if (nums.length === 0) {
+        // if its empyty return 0
+        return 0;
+    } else {
+        return nums[0] + sumArr(nums.slice(1));
+        //we call back the sumarr until the end of the array
+        ///new array that contains all the elements of the original array starting from the index 1
+        //  adds the right half to the first
+    }
+}
+console.log(sumArr(nums1));

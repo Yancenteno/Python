@@ -10,13 +10,21 @@ def home():
     return render_template('home.html')
 
 @app.route('/characters')
-def friends():
+def characters():
     return render_template('characters.html')
 
 @app.route('/location')
-def family():
+def location():
     return render_template('location.html')
 
 @app.route('/episodes')
-def enemies():
+def episodes():
     return render_template('episodes.html')
+
+@app.route('/dead')
+def dead():
+    return render_template('dead.html')
+
+@app.route('/alive')
+def alive():
+    return render_template('alive.html')

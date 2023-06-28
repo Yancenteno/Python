@@ -4,11 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Family</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/characters.css') }}">
+    <title>Characters</title>
 </head>
 
 <body>
+    <div class="content">
+        <div class="left-side">
+            <div class="portal-control">
+                <a href="/alive"><img class="portal" src="/static/img/portal.gif"></a>
+                <div class="title">Alive</div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="portal-control">
+                <a href="/home"><img class="portal" src="/static/img/portal.gif"></a>
+                <div class="title">Home</div>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="portal-control">
+                <a href="/dead"><img class="portal" src="/static/img/portal.gif"></a>
+                <div class="title">Dead</div>
+            </div>
+        </div>
+    </div>
 
+
+
+
+
+    <script src="{{ url_for('static', filename='js/characters.js') }}"></script>
 </body>
 
 </html>

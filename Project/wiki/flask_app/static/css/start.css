@@ -5,13 +5,11 @@
 
 body {
     background-image: url('/static/img/space-2.png');
-    background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .big-box {
-    height: 745px;
-    width: 1481px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +18,7 @@ body {
 .content {
     height: 600px;
     width: 800px;
+    margin-top: 10%;
 }
 
 .title {

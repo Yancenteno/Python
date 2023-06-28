@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dead.css') }}">
+    <title>Alive</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="left">
+            <div class="portal-control">
+                <a href="/characters"><img class="portal" src="/static/img/portal.gif"></a>
+                <div class="title">Characters</div>
+            </div>
+        </div>
+        <div class="middle">
+            <div>
+                <h1>Dead</h1>
+            </div>
+            <div>
+                <div id="rick-list"></div>
+                <div class="next">
+                    <button id="load-more">Load More</button>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="right">
+            <div class="portal-control">
+                <a href="/home"><img class="portal" src="/static/img/portal.gif"></a>
+                <div class="title">Home</div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/dead.js') }}"></script>
+</body>
+
+</html>

@@ -3,50 +3,41 @@
     padding: 0;
 }
 
-
 body {
-    background-image: url('/static/img/home.jpg');
+    background-image: url('/static/img/space.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-
-.box {
+.content {
     display: flex;
-    justify-content: space-around;
-    height: 500px;
-    margin-left: 16%;
-    margin-right: 16%;
+    height: 100vh;
+}
+
+.left-side {
+    width: 66.6vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+.middle {
+    width: 66.6vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.right-side {
+    width: 66.6vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
 }
 
 
-.bot-1 {
-    margin-top: 18%;
-}
-
-
-.bot-2 {
-    margin-top: 10%;
-}
-
-
-.bot-3 {
-    margin-top: 18%;
-}
-
-
-.portal-1 {
-    height: 200px;
-}
-
-
-.portal-2 {
-    height: 200px;
-}
-
-
-.portal-3 {
-    height: 200px;
+.portal {
+    height: 40vh;
 }
 
 .title {

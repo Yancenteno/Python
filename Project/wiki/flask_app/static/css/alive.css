@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('/static/img/dinasoar.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+.page {
+    height: 100vh;
+    display: flex;
+}
+
+
+.left {
+    width: 36.6vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.middle {
+    width: 126.6vh;
+    overflow-y: scroll;
+}
+
+.middle::-webkit-scrollbar {
+    width: 8px;
+    background-color: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
+
+
+
+.characterCard {
+    float: left;
+    border: 3px solid black;
+    margin: 10px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 15px;
+}
+
+
+.pic {
+    height: 30vh;
+    width: 30vh;
+    border-radius: 20%;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+
+
+.right {
+    width: 36.6vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.portal {
+    height: 30vh;
+}
+
+.next {
+    position: fixed;
+    bottom: 50px;
+    right: 18%;
+}
+
+button {
+    height: 50px;
+    width: 100px;
+}
+
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-family: 'Get Schwifty';
+    font-size: 50px;
+    color: white;
+    z-index: 50;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+
+    span {
+        font-size: 0.5em;
+    }
+}
+
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff') format('woff');
+}
