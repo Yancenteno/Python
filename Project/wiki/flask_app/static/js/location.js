@@ -1,37 +1,18 @@
-const rickList = document.getElementById("rick-list");
-const loadMoreButton = document.getElementById("load-more");
-let nextPage = 1;
+const questions = [
+    {
+        question: "How would your friends best describe you?",
+        choices: ['Intelligent', 'Goofy', 'Selfish', 'Adventurous'],
+    },
+    {
+        question: "How do you like spending your free time?",
+        choices: ['Traveling', 'On your phone', 'beekeeping', 'drinking'],
+    },
+    {
+        question: "what is your preferred method of traveling?",
+        choices: ['Portal Gun', 'Car', 'Spaceship', 'Horse']
+    }
+];
 
-loadMoreButton.addEventListener("click", fetchCharacters);
+let currQuestion = 0;
+let score = 0;
 
-function fetchCharacters() {
-    const rickApi = `https://rickandmortyapi.com/api/character/?page=${nextPage}&name&status=alive`;
-
-    fetch(rickApi)
-        .then(response => response.json())
-        .then(data => {
-            data.results.forEach(character => {
-                const characterCard = createCard(character);
-                rickList.appendChild(characterCard);
-            });
-
-            nextPage++;
-        })
-        .catch(err => console.log(err));
-}
-
-
-fetchCharacters();
-
-function createCard(character) {
-    const characterCard = document.createElement("div");
-    characterCard.className = "characterCard";
-    characterCard.innerHTML = `
-    <img class="pic" src="${character.image}" >
-    <h2>${character.name}</h2>
-    <p>Status: ${character.status}</p>
-    <p>Species: ${character.species}</p>
-  `;
-
-    return characterCard;
-}

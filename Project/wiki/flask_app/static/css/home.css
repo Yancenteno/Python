@@ -10,6 +10,14 @@ body {
     background-repeat: no-repeat;
 }
 
+.user-name {
+    display: flex;
+    justify-content: start;
+    height: 20vh;
+    font-size: 30px;
+    color: white;
+}
+
 
 .box {
     display: flex;
@@ -26,7 +34,7 @@ body {
 
 
 .bot-2 {
-    margin-top: 10%;
+    margin-top: 4%;
 }
 
 

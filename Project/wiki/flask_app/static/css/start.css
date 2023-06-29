@@ -7,33 +7,32 @@ body {
     background-image: url('/static/img/space-2.png');
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.big-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .content {
-    height: 600px;
-    width: 800px;
-    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1%;
 }
 
-.title {
+.top {
     display: flex;
     justify-content: center;
 }
 
-
-.enter {
-    display: flex;
-    justify-content: center;
+.reg {
+    border: 3px solid white;
+    font-size: 30px;
+    padding: 20px;
+    background-color: black;
 }
 
-
-.portal {
-    height: 300px;
-    width: 300px;
+.log {
+    border: 3px solid white;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
 }
