@@ -4,7 +4,52 @@
 }
 
 body {
-    background-image: url('/static/img/home.jpg');
+    background-image: url('/static/img/garage.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+
+.nav {
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: white;
+    width: 40vh;
+    margin-left: 70vh;
+    margin-top: 14vh;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.personality {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+
+#quiz {
+    background-color: white;
+    padding: 30px;
+
+    border: 3px solid black;
+    border-radius: 20px;
+    font-size: 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+#result {
+    border: 3px solid black;
+    border-radius: 20px;
+    font-size: 30px;
+    height: 20vh;
+    width: 20vh;
+    text-align: center;
+    background-color: white;
+    margin: 5px;
+    margin-top: 6vh;
 }

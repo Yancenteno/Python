@@ -1,3 +1,4 @@
+
 const questionElement = document.getElementById("question");
 const choicesElement = document.getElementById("choices");
 const submitButton = document.getElementById("submit");
@@ -15,6 +16,10 @@ const questions = [
     {
         q: "What is your preferred method of traveling?",
         choices: ["Portal Gun", "Spaceship", "Car", "None"],
+    },
+    {
+        q: "How do you handle stressful situations?",
+        choices: ["Stay calm and composed", "Get anxious but try to find a solution", "Panic and make things worse", "Avoid or ignore them"],
     },
 ];
 
@@ -43,6 +48,8 @@ function showScore() {
         } else {
             showResult();
         }
+    } else {
+        alert("Please select an answer.");
     }
 }
 
@@ -56,12 +63,13 @@ function showResult() {
         result = "You are most like Morty!";
     } else if (score >= 7 && score <= 9) {
         result = "You are most like Summer!";
-    } else {
+    } else if (score >= 10) {
         result = "You are most like Beth!";
     }
 
     resultContainer.textContent = result;
 }
+
 
 submitButton.addEventListener("click", showScore);
 

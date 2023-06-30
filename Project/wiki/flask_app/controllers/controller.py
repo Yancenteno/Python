@@ -2,6 +2,7 @@ from flask import render_template, redirect, request, session, flash
 from flask_app import app
 from flask_app.models.user_model import User
 
+
 @app.route('/')
 def start_page():
     return render_template('start.html')
@@ -29,10 +30,9 @@ def characters():
 
 
 @app.route('/quiz')
-def location():
+def quiz():
     if 'user_id' not in session:
         return redirect('/')
-    
     newUser = User.get_id({'user_id': session['user_id']})
     
     return render_template('quiz.html', newUser=newUser)

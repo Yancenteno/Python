@@ -12,12 +12,16 @@ body {
 
 .user-name {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     height: 20vh;
     font-size: 30px;
     color: white;
+    padding: 20px;
 }
 
+.logout {
+    color: white;
+}
 
 .box {
     display: flex;
