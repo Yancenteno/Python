@@ -28,14 +28,14 @@ def characters():
 
 
 
-@app.route('/location')
+@app.route('/quiz')
 def location():
     if 'user_id' not in session:
         return redirect('/')
     
     newUser = User.get_id({'user_id': session['user_id']})
     
-    return render_template('location.html', newUser=newUser)
+    return render_template('quiz.html', newUser=newUser)
 
 
 
